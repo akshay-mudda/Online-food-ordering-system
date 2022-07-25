@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="navbar">
+    <h3 class="logo">NTKSAMS</h3>
+    <nav>
+      <ul class="nav_ul">
+        <li><a routerLink="">Home</a></li>
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/register" routerLinkActive="active">Signup</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="details">
+    <!-- <app-title class="title" title="Register"></app-title> -->
+     <div class="title_con">
+      <h1 class="title">Register</h1>
+    </div> 
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+      <text-input
+        [control]="fc.name"
+        [showErrorsWhen]="isSubmitted"
+        label="Name">
+      `</text-input>
+
+      <text-input
+        [control]="fc.email"
+        [showErrorsWhen]="isSubmitted"
+        label="Email"
+        type="email">
+      `</text-input>
+
+      <text-input
+        [control]="fc.password"
+        [showErrorsWhen]="isSubmitted"
+        label="Password"
+        type="password">
+      `</text-input>
+
+      <text-input
+        [control]="fc.confirmPassword"
+        [showErrorsWhen]="isSubmitted"
+        label="Confirm Password"
+        type="password">
+        `</text-input>
+
+      <text-input
+        [control]="fc.address"
+        [showErrorsWhen]="isSubmitted"
+        label="Address">
+        `</text-input>
+      <default-button class="reg_btn" text="Register"></default-button>
+      <div class="login">
+        Already a user? &nbsp;
+        <a routerLink="/login" class="login_btn" [queryParams]="{returnUrl: returnUrl}">
+          Login Here
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

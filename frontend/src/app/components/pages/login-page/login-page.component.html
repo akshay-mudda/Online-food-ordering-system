@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="navbar">
+    <h3 class="logo">NTKSAMS</h3>
+    <nav>
+      <ul class="nav_ul">
+        <li><a routerLink="">Home</a></li>
+        <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+        <li><a routerLink="/register">Signup</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="details">
+    <!-- <app-title class="title" title="Login">Login</app-title> -->
+    <div class="title_con">
+      <h1 class="title">Login</h1>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <div class="input_con">
+      <text-input
+        [control]="fc.email"
+        [showErrorsWhen]="isSubmitted"
+        type="email"
+        label="Email">
+      </text-input>
+    </div>
+    <div class="input_con">
+      <text-input
+        [control]="fc.password"
+        [showErrorsWhen]="isSubmitted"
+        type="password"
+        label="Password">
+      </text-input>
+    </div>
+    <default-button class="login_btn" text="Login"></default-button>
+    <div class="register">
+      Not Have an Account? &nbsp;
+      <a routerLink="/register" class="reg_btn" [queryParams]="{returnUrl : returnUrl}">
+        Register here
+      </a>
+    </div>
+    </form>
+  </div>
+  <div class="quote">
+    <h3>&quot;Let deliciousness twirl in your mouth.
+        Best Service to fulfill your expectations.&quot;</h3>
+    </div>
+
+
+
+  <!-- <div class="details">
+    <app-title title="Login">Login</app-title>
+    <div class="title_con">
+      <h1 class="title">Header</h1>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <div class="input_con">
+      <text-input
+        [control]="fc.email"
+        [showErrorsWhen]="isSubmitted"
+        type="email"
+        label="Email">
+      </text-input>
+    </div>
+    <div class="input_con">
+      <text-input
+        [control]="fc.password"
+        [showErrorsWhen]="isSubmitted"
+        type="password"
+        label="Password">
+      </text-input>
+    </div>
+    <default-button text="Login"></default-button>
+    <div class="register">
+      New user? &nbsp;
+      <a routerLink="/register" [queryParams]="{returnUrl : returnUrl}">
+        Register here
+      </a>
+    </div>
+    </form>
+  </div> -->
+</div>

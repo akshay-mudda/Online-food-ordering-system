@@ -1,0 +1,14 @@
+div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div a{
+  background-color: #81adbe;
+  padding: 0.4rem 1rem;
+  margin: 0.3rem 0.25rem;
+  border-radius: 10rem;
+  font-weight: 600;
+  color: rgb(250, 251, 251);
+}
